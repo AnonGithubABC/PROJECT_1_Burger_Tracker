@@ -21,16 +21,24 @@ class BurgerDeal
     @id = burger_deal_data[0]['id'].to_i
   end
 
-  def day()
-    day = Day.find(@day_id)
-    return day
-  end
 
+  def day()
+    sql = "SELECT * FROM days
+    WHERE id = $1"
+    values = [@day_id]
+    results = SqlRunner.run( sql, values )
+    return Day.new( results.first )
+  end
 
   def burger()
-    burger = Burger.new(@burger_id)
-    return burger
+    sql = "SELECT * FROM burgers
+    WHERE id = $1"
+    values = [@burger_id]
+    results = SqlRunner.run( sql, values )
+    return Burger.new( results.first )
   end
+
+
 
   def delete()
     sql = "DELETE FROM burger_deals WHERE id = $1"

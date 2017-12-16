@@ -27,12 +27,12 @@ eatery7.save
 
 
 day1 = Day.new({'name' => 'Monday'})
-day1 = Day.new({'name' => 'Tuesday'})
-day1 = Day.new({'name' => 'Wednesday'})
-day1 = Day.new({'name' => 'Thursday'})
-day1 = Day.new({'name' => 'Friday'})
-day1 = Day.new({'name' => 'Saturday'})
-day1 = Day.new({'name' => 'Sunday'})
+day2 = Day.new({'name' => 'Tuesday'})
+day3 = Day.new({'name' => 'Wednesday'})
+day4 = Day.new({'name' => 'Thursday'})
+day5 = Day.new({'name' => 'Friday'})
+day6 = Day.new({'name' => 'Saturday'})
+day7 = Day.new({'name' => 'Sunday'})
 
 day1.save
 day2.save
@@ -45,78 +45,78 @@ day7.save
 burger1 = Burger.new({
   'name' => 'Cheeseburger',
   'price' => 6,
-  'eatery_id' => eater1.id
+  'eatery_id' => eatery1.id
 })
 burger2 = Burger.new({
   'name' => 'Chicken Burger',
   'price' => 7,
-  'eatery_id' => eater1.id
+  'eatery_id' => eatery1.id
 })
 
 burger3 = Burger.new({
   'name' => 'Cheeseburger',
   'price' => 10,
-  'eatery_id' => eater2.id
+  'eatery_id' => eatery2.id
 })
 burger4 = Burger.new({
   'name' => 'Chicken Burger',
   'price' => 12,
-  'eatery_id' => eater2.id
+  'eatery_id' => eatery2.id
 })
 
 burger5 = Burger.new({
   'name' => 'Cheeseburger',
   'price' => 6,
-  'eatery_id' => eater3.id
+  'eatery_id' => eatery3.id
 })
 burger6 = Burger.new({
   'name' => 'Chicken Burger',
   'price' => 10,
-  'eatery_id' => eater3.id
+  'eatery_id' => eatery3.id
 })
 
 burger7 = Burger.new({
   'name' => 'Cheeseburger',
   'price' => 6,
-  'eatery_id' => eater4.id
+  'eatery_id' => eatery4.id
 })
 burger8 = Burger.new({
   'name' => 'Chicken Burger',
   'price' => 6,
-  'eatery_id' => eater4.id
+  'eatery_id' => eatery4.id
 })
 
 burger9 = Burger.new({
   'name' => 'Cheeseburger',
   'price' => 6,
-  'eatery_id' => eater5.id
+  'eatery_id' => eatery5.id
 })
 burger10 = Burger.new({
   'name' => 'Chicken Burger',
   'price' => 10,
-  'eatery_id' => eater5.id
+  'eatery_id' => eatery5.id
 })
 
 burger11 = Burger.new({
   'name' => 'Cheeseburger',
   'price' => 9,
-  'eatery_id' => eater6.id
+  'eatery_id' => eatery6.id
 })
 burger12 = Burger.new({
   'name' => 'Chicken Burger',
   'price' => 11,
-  'eatery_id' => eater6.id
+  'eatery_id' => eatery6.id
 })
 
 burger13 = Burger.new({
   'name' => 'Cheeseburger',
   'price' => 4,
-  'eatery_id' => eater7.id
+  'eatery_id' => eatery7.id
 })
 burger14 = Burger.new({
   'name' => 'Chicken Burger',
   'price' => 4,
-  'eatery_id' => eater7.id
+  'eatery_id' => eatery7.id
 })
 
 burger1.save
@@ -134,6 +134,8 @@ burger12.save
 burger13.save
 burger14.save
 
+binding.pry
+nil
 
 burger_deal1 = BurgerDeal.new({
   'deal_name' => '50% Off',
@@ -143,5 +145,5 @@ burger_deal1 = BurgerDeal.new({
 
 burger_deal1.save
 
-binding.pry
-nil
+# binding.pry
+# nil
