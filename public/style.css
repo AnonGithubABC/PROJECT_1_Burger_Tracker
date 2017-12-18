@@ -15,33 +15,20 @@ body {
     /*height: 50px;*/
 }
 
-.left {
-  margin: auto;
-  width: 400px;
-  height: 70px;
-  line-height: 70px;
-  border: 5px solid white;
-  padding: 10px 10px 10px 10px;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-container>div {
+margin: auto;
+text-align: center;
+width: 400px;
+height: 70px;
+line-height: 70px;
+border: 5px solid white;
+padding: 10px 10px 10px 10px;
 }
 
-.center {
-  margin: auto;
-  width: 400px;
-  height: 70px;
-  line-height: 70px;
-  border: 5px solid white;
-  padding: 10px 10px 10px 10px;
-}
-
-.right {
-  margin: auto;
-  text-align: center;
-  width: 400px;
-  height: 70px;
-  line-height: 70px;
-  border: 5px solid white;
-  padding: 10px 10px 10px 10px;
-}
 
 
 
@@ -66,11 +53,13 @@ h1 {
 a, a:link, a:visited {
   color: white;
   text-decoration: none;
+  font-family: Arial Black;
 }
 
 p, p:link, p:visited {
   color: white;
   text-decoration: none;
+
 }
 
 div.header-img {
@@ -112,6 +101,8 @@ div.topnav a {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 /* Change the color of links on hover */
