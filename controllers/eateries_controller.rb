@@ -12,3 +12,9 @@ get '/eateries/:id' do
   @eatery = Eatery.find(params['id'].to_i)
   erb( :"eateries/show" )
 end
+
+post '/add_eateries' do
+  @eatery = Eatery.new(params)
+  @eatery.save
+  redirect to '/eateries'
+end

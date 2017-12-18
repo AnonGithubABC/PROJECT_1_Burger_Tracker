@@ -78,16 +78,16 @@ class BurgerDeal
   end
 
 
-  def self.find_by_burgername(name_to_find)
+  def self.find_by_burgername(burgername_to_find)
     sql = "SELECT * FROM burgers WHERE name = $1"
-    values = [name_to_find]
+    values = [burgername_to_find]
     results = SqlRunner.run( sql, values )
     return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
   end
 
-  def self.find_by_eateryname(name)
+  def self.find_by_eateryname(eateryname_to_find)
     sql = "SELECT * FROM eateries where name = name"
-    values = [name]
+    values = [eateryname_to_find]
     results = SqlRunner.run( sql, values )
     return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
   end

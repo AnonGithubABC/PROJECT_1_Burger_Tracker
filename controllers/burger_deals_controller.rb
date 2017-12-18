@@ -19,10 +19,7 @@ get '/burger_deals/daydeals' do
   erb( :"burger_deals/daydeals" )
 end
 
-get '/burger_deals/burgerdeals/:burger_id' do
-  @burger_deal = BurgerDeal.find_all_by_burger()
-  erb( :"burger_deals/show" )
-end
+
 get '/burger_deals/burgerdeals' do
   @burgers = Burger.all_unique()
   erb( :"burger_deals/burgerdeals" )
@@ -32,13 +29,14 @@ get '/burger_deals/burgerdeals/:burger_name' do
   erb( :"burger_deals/burgerdeals" )
 end
 
+
 get '/burger_deals/eaterydeals' do
-  @eateries = Eatery.all()
+  @eateries = Eatery.all_unique()
   erb( :"burger_deals/eaterydeals" )
 end
-get '/burger_deals/eaterydeals/:eatery_id' do
+get '/burger_deals/eaterydeals/:eatery_name' do
   @eatery_deal = Eatery.find_all_by_eatery()
-  erb( :"burger_deals/show" )
+  erb( :"burger_deals/eaterydeals" )
 end
 
 

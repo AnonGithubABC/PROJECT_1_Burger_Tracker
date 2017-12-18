@@ -1,16 +1,51 @@
 body {
-  background-color: black;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  color: white;
-  font-family: serif;
-  padding: 0px;
-  margin: 0px;
+  background-color: wheat;
+  margin: 20;
+  padding: 20;
 }
 
+.container {
+    position: relative;
+    width: 75%;
+    height: 50px;
+}
+
+.left {
+  margin: auto;
+  width: 50%;
+  border: 3px solid grey;
+  padding: 10px;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid grey;
+  padding: 10px;
+}
+
+.right {
+  margin: auto;
+  width: 50%;
+  border: 3px solid grey;
+  padding: 10px;
+}
+
+
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Special Elite', cursive;
+  font-family: sans-serif;
   margin: 0px;
   padding: 0px;
-  color: white;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: black;
+  margin-bottom: 20px;
+}
+
+a, a:link, a:visited {
+  color: black;
+  text-decoration: none;
 }

@@ -3,16 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>Burger Tracker</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="icon" href="/images/burger_icon.png"/>
+    <h1 style="text-align:center">Jarod's Burger Tracker</h1>
+    <p style="text-align:center">What Deals Will Jarod Find Today?...</p>
   </head>
   <body>
+    <main class="flex flex--row">
     <nav>
       <ul>
+        <li> <a href="/">Home</a> </li>
         <li> <a href="/burger_deals/burgerdeals">Deals By Burger</a> </li>
         <li> <a href="/burger_deals/daydeals">Deals By Day</a> </li>
         <li> <a href="/burger_deals/eaterydeals">Deals By Eatery</a> </li>
       </ul>
     </nav>
+
+    <div class="container">
+      <div class="left">
+      </div>
+    </div>
+    <div class="container">
+      <div class="center">
+      </div>
+    </div>
+    <div class="container">
+      <div class="right">
+      </div>
+    </div>
+    </main>
     <%= yield %>
   </body>
 </html>
