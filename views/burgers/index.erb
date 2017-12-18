@@ -1,9 +1,15 @@
 <h1 style="text-align:center">LIST OF ALL BURGERS</h1>
 
+<div style="text-align:center">
+  <h4>
 <% for burger in @burgers %>
-  <%=  burger.name %>
+  <%=  burger.name  %> | £<%= burger.price %> | <%= burger.eatery_id %>
+
+
   <br/>
 
 <% end %>
 <br/>
 <li><a href='burgers/new'>Add New Burger</a></li>
+</h4>
+</div>

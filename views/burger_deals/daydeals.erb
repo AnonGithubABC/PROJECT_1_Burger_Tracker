@@ -1,7 +1,10 @@
-<h1 style="text-align:center">SELECT BURGER BY DAY</h1>
+<h3 style="text-align:center">SELECT BURGER BY DAY</h3>
 
 <% @days.each do |day| %>
+
+
   <a href="/burger_deals/daydeals/<%= day.id %>">
-    <img src="/images/<%= day.name %>-ICON.svg" alt="" width="13%" height="13%"> </a>
+    <img src="/images/<%= day.name %>-ICON.png" alt="" width="10%" height="10%"> </a>
+
 
 <% end %>
