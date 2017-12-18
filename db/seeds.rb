@@ -134,9 +134,6 @@ burger12.save
 burger13.save
 burger14.save
 
-binding.pry
-nil
-
 burger_deal1 = BurgerDeal.new({
   'deal_name' => '50% Off',
   'day_id' => day1.id,
@@ -145,5 +142,5 @@ burger_deal1 = BurgerDeal.new({
 
 burger_deal1.save
 
-# binding.pry
-# nil
+binding.pry
+nil

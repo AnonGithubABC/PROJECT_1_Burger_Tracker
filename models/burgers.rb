@@ -14,7 +14,7 @@ class Burger
 
   def save()
     sql = "INSERT INTO burgers (name, price, eatery_id)
-    VALUES ($1)
+    VALUES ($1, $2, $3)
     RETURNING id"
     values = [@name, @price, @eatery_id]
     burger_data = SqlRunner.run(sql, values)
