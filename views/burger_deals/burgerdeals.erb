@@ -1,7 +1,8 @@
-<h3 style="text-align:center">SELECT BURGER BY TYPE</h3>
+<h2 style="text-align:center">SELECT BURGER BY TYPE</h2>
 
-
+<div class="burger-icons">
 <% @burgers.each do |burger| %>
   <a href="/burger_deals/burgerdeals/<%= burger.id %>">
     <img src="/images/<%= burger.name %>-ICON.png" alt=""> </a>
 <% end %>
+</div>

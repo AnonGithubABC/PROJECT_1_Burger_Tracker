@@ -1,10 +1,9 @@
-<h3 style="text-align:center">SELECT BURGER BY DAY</h3>
+<h2 style="text-align:center">SELECT BURGER BY DAY</h2>
 
+<br/>
+<div class="day-icons">
 <% @days.each do |day| %>
-
-
   <a href="/burger_deals/daydeals/<%= day.id %>">
     <img src="/images/<%= day.name %>-ICON.png" alt="" width="10%" height="10%"> </a>
-
-
 <% end %>
+</div>

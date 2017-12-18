@@ -1,6 +1,3 @@
-head {
-  margin: auto;
-}
 
 
 body {
@@ -8,6 +5,8 @@ body {
   background-color: black  ;
   margin: 20;
   padding: 20;
+  padding-bottom: 200px;
+  padding-top: 20px
 }
 
 .container {
@@ -20,6 +19,7 @@ body {
   margin: auto;
   width: 400px;
   height: 70px;
+  line-height: 70px;
   border: 5px solid white;
   padding: 10px 10px 10px 10px;
 }
@@ -28,6 +28,7 @@ body {
   margin: auto;
   width: 400px;
   height: 70px;
+  line-height: 70px;
   border: 5px solid white;
   padding: 10px 10px 10px 10px;
 }
@@ -37,6 +38,7 @@ body {
   text-align: center;
   width: 400px;
   height: 70px;
+  line-height: 70px;
   border: 5px solid white;
   padding: 10px 10px 10px 10px;
 }
@@ -76,7 +78,50 @@ div.header-img {
   margin: auto;
   width:100%;
   height:100%;
+}
 
-div {
-  color: white;
+div.burger-icons {
+  text-align: center;
+  margin: auto;
+}
+
+div.day-icons {
+  text-align: center;
+  margin: auto;
+}
+
+div.eatery-icons {
+  text-align: center;
+  margin: auto;
+}
+
+
+
+
+/* Add a black background color to the top navigation */
+div.topnav {
+    background-color: grey;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+div.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+div.topnav a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+div.topnav a.active {
+    background-color: white;
+    color: black;
 }

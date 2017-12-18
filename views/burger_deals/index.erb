@@ -1,6 +1,7 @@
 <h1 style="text-align:center">LIST OF ALL BURGERS DEALS</h1>
 
 <div style="text-align:center">
+  <h4>
 <% for burger_deal in @burger_deals %>
  <%= burger_deal.deal_name %>
 <br/>
@@ -8,4 +9,5 @@
 <% end %>
 <br/>
 <li><a href='burger_deals/new'>Add New Burger Deal</a></li>
+</h4>
 </div>
