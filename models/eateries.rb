@@ -49,6 +49,11 @@ class Eatery
     SqlRunner.run( sql, values )
   end
 
-
+  def self.all_unique()
+    sql = "SELECT DISTINCT ON (name) * FROM eateries;"
+    values = []
+    results = SqlRunner.run( sql, values )
+    return results.map { |eatery| Eatery.new( eatery ) }
+  end
 
 end

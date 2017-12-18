@@ -9,12 +9,12 @@ Burger.delete_all()
 Day.delete_all()
 Eatery.delete_all()
 
-eatery1 = Eatery.new({'name' => 'Five Guys'})
-eatery2 = Eatery.new({'name' => 'Bread Meats Bread'})
+eatery1 = Eatery.new({'name' => 'Five-Guys'})
+eatery2 = Eatery.new({'name' => 'Bread-Meats-Bread'})
 eatery3 = Eatery.new({'name' => 'Byron Burgers'})
 eatery4 = Eatery.new({'name' => 'Belted Burgers'})
 eatery5 = Eatery.new({'name' => 'Handmade Burger Co'})
-eatery6 = Eatery.new({'name' => 'Jos Burger Van'})
+eatery6 = Eatery.new({'name' => 'Braw'})
 eatery7 = Eatery.new({'name' => 'McDonalds'})
 
 eatery1.save
@@ -48,7 +48,7 @@ burger1 = Burger.new({
   'eatery_id' => eatery1.id
 })
 burger2 = Burger.new({
-  'name' => 'Chicken Burger',
+  'name' => 'Chickenburger',
   'price' => 7,
   'eatery_id' => eatery1.id
 })
@@ -59,7 +59,7 @@ burger3 = Burger.new({
   'eatery_id' => eatery2.id
 })
 burger4 = Burger.new({
-  'name' => 'Chicken Burger',
+  'name' => 'Chickenburger',
   'price' => 12,
   'eatery_id' => eatery2.id
 })
@@ -70,7 +70,7 @@ burger5 = Burger.new({
   'eatery_id' => eatery3.id
 })
 burger6 = Burger.new({
-  'name' => 'Chicken Burger',
+  'name' => 'Chickenburger',
   'price' => 10,
   'eatery_id' => eatery3.id
 })
@@ -81,7 +81,7 @@ burger7 = Burger.new({
   'eatery_id' => eatery4.id
 })
 burger8 = Burger.new({
-  'name' => 'Chicken Burger',
+  'name' => 'Chickenburger',
   'price' => 6,
   'eatery_id' => eatery4.id
 })
@@ -92,7 +92,7 @@ burger9 = Burger.new({
   'eatery_id' => eatery5.id
 })
 burger10 = Burger.new({
-  'name' => 'Chicken Burger',
+  'name' => 'Chickenburger',
   'price' => 10,
   'eatery_id' => eatery5.id
 })
@@ -103,7 +103,7 @@ burger11 = Burger.new({
   'eatery_id' => eatery6.id
 })
 burger12 = Burger.new({
-  'name' => 'Chicken Burger',
+  'name' => 'Chickenburger',
   'price' => 11,
   'eatery_id' => eatery6.id
 })
@@ -114,7 +114,7 @@ burger13 = Burger.new({
   'eatery_id' => eatery7.id
 })
 burger14 = Burger.new({
-  'name' => 'Chicken Burger',
+  'name' => 'Chickenburger',
   'price' => 4,
   'eatery_id' => eatery7.id
 })
@@ -139,8 +139,45 @@ burger_deal1 = BurgerDeal.new({
   'day_id' => day1.id,
   'burger_id' => burger1.id
 })
+burger_deal2 = BurgerDeal.new({
+  'deal_name' => 'Two For Tuesday!',
+  'day_id' => day2.id,
+  'burger_id' => burger4.id
+})
+burger_deal3 = BurgerDeal.new({
+  'deal_name' => 'FREE FRIES',
+  'day_id' => day3.id,
+  'burger_id' => burger5.id
+})
+burger_deal4 = BurgerDeal.new({
+  'deal_name' => 'FREE FRIES & DRINK',
+  'day_id' => day4.id,
+  'burger_id' => burger8.id
+})
+burger_deal5 = BurgerDeal.new({
+  'deal_name' => '25% OFF',
+  'day_id' => day5.id,
+  'burger_id' => burger9.id
+})
+burger_deal6 = BurgerDeal.new({
+  'deal_name' => 'HALF PRICE',
+  'day_id' => day6.id,
+  'burger_id' => burger12.id
+})
+burger_deal7 = BurgerDeal.new({
+  'deal_name' => 'BOGOF',
+  'day_id' => day7.id,
+  'burger_id' => burger13.id
+})
 
 burger_deal1.save
+burger_deal2.save
+burger_deal3.save
+burger_deal4.save
+burger_deal5.save
+burger_deal6.save
+burger_deal7.save
+
 
 binding.pry
 nil

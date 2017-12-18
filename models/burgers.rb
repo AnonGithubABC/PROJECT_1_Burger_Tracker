@@ -33,7 +33,6 @@ class Burger
   SqlRunner.run(sql, values)
 end
 
-
   #---------CLASS METHODS BELOW-------------#
 
   def self.all()
@@ -57,6 +56,12 @@ end
     SqlRunner.run( sql, values )
   end
 
+  def self.all_unique()
+    sql = "SELECT DISTINCT ON (name) * FROM burgers;"
+    values = []
+    results = SqlRunner.run( sql, values )
+    return results.map { |burger| Burger.new( burger ) }
+  end
 
 
 

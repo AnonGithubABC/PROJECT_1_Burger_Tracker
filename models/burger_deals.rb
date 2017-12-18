@@ -70,5 +70,25 @@ class BurgerDeal
     SqlRunner.run( sql, values )
   end
 
+  def self.find_all_by_day(id)
+    sql = "SELECT * FROM burger_deals WHERE day_id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
+  end
 
+
+  def self.find_by_burgername(name_to_find)
+    sql = "SELECT * FROM burgers WHERE name = $1"
+    values = [name_to_find]
+    results = SqlRunner.run( sql, values )
+    return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
+  end
+
+  def self.find_by_eateryname(name)
+    sql = "SELECT * FROM eateries where name = name"
+    values = [name]
+    results = SqlRunner.run( sql, values )
+    return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
+  end
 end
