@@ -20,3 +20,9 @@ get '/burgers/:id' do
   @burger = Burger.find(params['id'].to_i)
   erb( :"burgers/show" )
 end
+
+post '/add_burgers' do
+  @burger = Burger.new(params)
+  @burger.save
+  redirect to '/burgers'
+end

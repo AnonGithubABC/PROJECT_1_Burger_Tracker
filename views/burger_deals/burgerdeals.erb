@@ -1,7 +1,7 @@
-<h1>LIST OF ALL DEALS</h1>
+<h1 style="text-align:center">SELECT BURGER BY TYPE</h1>
+
 
 <% @burgers.each do |burger| %>
   <a href="/burger_deals/burgerdeals/<%= burger.id %>">
     <img src="/images/<%= burger.name %>-ICON.png" alt=""> </a>
-
 <% end %>

@@ -12,6 +12,8 @@ end
 
 get '/burger_deals/new' do
   @days = Day.all
+  # @eateries = Eatery.all
+  @burgers = Burger.all
   @burger_deals = BurgerDeal.all
   erb(:"burger_deals/new")
 end
@@ -43,6 +45,12 @@ end
 get '/burger_deals/eaterydeals/:eatery_name' do
   @eatery_deal = Eatery.find_all_by_eatery()
   erb( :"burger_deals/eaterydeals" )
+end
+
+post '/add_burgerdeals' do
+  @burger_deal = BurgerDeal.new(params)
+  @burger_deal.save
+  redirect to '/burger_deals'
 end
 
 

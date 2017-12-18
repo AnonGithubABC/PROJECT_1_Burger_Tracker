@@ -4,14 +4,21 @@
   <input id="burger-name-input" type="text" name="deal_name" value="">
 
   <label for="day-select">Day:</label>
-  <select class="day_id" name="day_select">
+  <select class="day_id" name="day-select">
     <% @days.each do |day| %>
             <option value=<%= day.id %>><%= day.name.capitalize %></option>
         <% end %>
   </select>
 
-  <label for="burger-input">Burger:</label>
-  <input id="burger-input" type="txt" name="burger_id" value="">
+  <label for="burger-select">Burger:</label>
+  <select class="burger_id" name="burger-select">
+    <% @burgers.each do |burger| %>
+            <options value=<%= burger.id %>><%= burger.name %></option>
+        <% end %>
+  </select>
+
+  <label for="eatery-input">Eatery:</label>
+  <input id="eatery-input" type="txt" name="eatery_id" value="">
 
 
 
