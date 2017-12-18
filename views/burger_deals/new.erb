@@ -1,9 +1,9 @@
 <form action="/add_burgersdeals" method="POST">
 
   <label for="deal-name-input">Deal Name:</label>
-  <input id="burger-name-input" type="text" name="name" value="">
+  <input id="burger-name-input" type="text" name="deal_name" value="">
 
-  <label for="day-select">Price:</label>
+  <label for="day-select">Day:</label>
   <select class="day_id" name="day_select">
     <% @days.each do |day| %>
             <option value=<%= day.id %>><%= day.name.capitalize %></option>

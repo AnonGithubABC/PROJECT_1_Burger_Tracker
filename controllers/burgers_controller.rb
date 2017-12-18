@@ -11,6 +11,11 @@ get '/burgers' do
   erb ( :"burgers/index" )
 end
 
+get '/burgers/new' do
+  @burgers = Burger.all
+  erb(:"burgers/new")
+end
+
 get '/burgers/:id' do
   @burger = Burger.find(params['id'].to_i)
   erb( :"burgers/show" )

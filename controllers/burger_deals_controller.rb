@@ -10,6 +10,12 @@ get '/burger_deals' do
   erb ( :"burger_deals/index" )
 end
 
+get '/burger_deals/new' do
+  @days = Day.all
+  @burger_deals = BurgerDeal.all
+  erb(:"burger_deals/new")
+end
+
 get '/burger_deals/daydeals/:day_id' do
   @burger_deal = BurgerDeal.find_all_by_day()
   erb( :"burger_deals/show" )

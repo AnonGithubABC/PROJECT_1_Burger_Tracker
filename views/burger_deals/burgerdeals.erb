@@ -1,5 +1,7 @@
+<h1>LIST OF ALL DEALS</h1>
+
 <% @burgers.each do |burger| %>
-  <a href="/burger_deals/burgerdeals/<%= burger.name %>">
+  <a href="/burger_deals/burgerdeals/<%= burger.id %>">
     <img src="/images/<%= burger.name %>-ICON.png" alt=""> </a>
 
 <% end %>

@@ -8,6 +8,11 @@ get '/eateries' do
   erb ( :"eateries/index" )
 end
 
+get '/eateries/new' do
+  @eateries = Eatery.all
+  erb(:"eateries/new")
+end
+
 get '/eateries/:id' do
   @eatery = Eatery.find(params['id'].to_i)
   erb( :"eateries/show" )
