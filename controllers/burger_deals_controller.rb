@@ -19,9 +19,10 @@ get '/burger_deals/new' do
 end
 
 get '/burger_deals/daydeals/:day_id' do
-  @burger_deal = BurgerDeal.find_all_by_day()
+  @burger_deals = BurgerDeal.find_all_by_day(params[:id])
   erb( :"burger_deals/show" )
 end
+
 get '/burger_deals/daydeals' do
   @days = Day.all()
   erb( :"burger_deals/daydeals" )
@@ -52,15 +53,3 @@ post '/add_burgerdeals' do
   @burger_deal.save
   redirect to '/burger_deals'
 end
-
-
-
-# get '/burger_deals/eatery/:id' do
-#   @burger_deal = BurgerDeal.find_all(params['id'].to_i)
-#   erb( :"burger_deals/show" )
-# end
-#
-# get '/burger_deals/burger/:type' do
-#   @burger_deal = BurgerDeal.find_all(params['id'].to_i)
-#   erb( :"burger_deals/show" )
-# end
