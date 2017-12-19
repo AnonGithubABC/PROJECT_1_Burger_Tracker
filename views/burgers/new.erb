@@ -6,8 +6,23 @@
   <label for="price-input">Price (£):</label>
   <input id="price-input" type="number" min="1" max="30" name="price" value="">
 
-  <label for="eatery-input">Eatery:</label>
-  <input id="eatery-input" type="text" name="eatery_id" value="">
+<label for="eatery_select">Select Eatery:</label>
+  <select name="eatery_id" id="eatery_select">
+      <% @eateries.each do |eatery| %>
+          <option value=<%= eatery.id %>><%= eatery.name %></option>
+        <% end %>
+  </select>
+
+<!-- <label for="eatery_select">Select Eatery:</label>
+<select id="eatery_id" class="" name="eatery">
+  <option value="FiveGuys">Five Guys</option>
+  <option value="BreadMeatsBread">Bread Meats Bread</option>
+  <option value="ByronBurgers">Byron Burgers</option>
+  <option value="BeltedBurgers">Belted Burgers</option>
+  <option value="HandmadeBurgerCo">Handmade Burger Co</option>
+  <option value="Braw">Braw</option>
+  <option value="McDonalds">McDonalds</option>
+</select> -->
 
   <input type="submit" name="" value="Add New Burger">
 </p>

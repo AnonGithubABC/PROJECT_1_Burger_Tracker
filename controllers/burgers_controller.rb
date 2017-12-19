@@ -12,14 +12,29 @@ get '/burgers' do
 end
 
 get '/burgers/new' do
+  @eateries = Eatery.all
   @burgers = Burger.all
   erb(:"burgers/new")
 end
 
+get '/burgers/:id/day' do
+  id = params[:id]
+  @burger = Burger.find(id)
+  @days = @burger.days
+  erb( :"burgers/days" )
+
+end
+
 get '/burgers/:id' do
-  @burger = Burger.find(params['id'].to_i)
+  id = params[:id]
+  @burger = Burger.find(id)
   erb( :"burgers/show" )
 end
+
+  # get '/burgers/:name' do
+  #   @burger = Burger.find(params['id'].to_i)
+  #   erb( :"burgers/show" )
+  # end
 
 post '/add_burgers' do
   @burger = Burger.new(params)

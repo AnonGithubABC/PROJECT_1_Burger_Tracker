@@ -40,6 +40,7 @@ class Eatery
     WHERE id = $1"
     values = [id]
     results = SqlRunner.run( sql, values )
+    binding.pry
     return Eatery.new(results[0])
   end
 

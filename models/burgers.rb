@@ -27,6 +27,15 @@ class Burger
     return eatery
   end
 
+  def days()
+    sql = "SELECT days.* FROM days INNER JOIN burger_deals ON
+    burger_deals.day_id = days.id WHERE burger_deals.burger_id = $1;"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |day| Day.new(day) }
+  end
+
+
   def delete()
   sql = "DELETE FROM burgers WHERE id = $1"
   values = [@id]
