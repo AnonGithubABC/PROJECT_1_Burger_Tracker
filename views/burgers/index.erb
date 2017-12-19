@@ -2,16 +2,17 @@
 
 
 <div style="text-align:center">
-<h2><li><a href='burgers/new'>+ Add New Burger</a></li></h2>
-  <br/>
-  <h4>
+<h2><li style="list-style-type: none;"><a href='burgers/new'>+ Add New Burger +</a></li></h2>
+
+  <h3>
+    <hr width="50%">
 <% for burger in @burgers %>
-  <%=  burger.name  %> / Price: £<%= burger.price %> / Eatery ID: <%= burger.eatery_id %>
-<hr/>
-  <br/>
+   NAME: <%= burger.name %> <br/> PRICE: £<%= burger.price %> <br/> EATERY ID: <%= burger.eatery_id %>
+    <hr width="50%">
+
 
 <% end %>
   <br/>
 
-  </h4>
+</h3>
 </div>

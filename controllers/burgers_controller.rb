@@ -22,7 +22,13 @@ get '/burgers/:id/day' do
   @burger = Burger.find(id)
   @days = @burger.days
   erb( :"burgers/days" )
+end
 
+get '/burgers/:id/eatery' do
+  id = params[:id]
+  @burger = Burger.find(id)
+  @eateries = @burger.eatery
+  erb( :"burgers/eatery" )
 end
 
 get '/burgers/:id' do

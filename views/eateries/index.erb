@@ -2,16 +2,17 @@
 
 
 <div style="text-align:center">
-<h2><li><a href='eateries/new'>Add New Eateries</a></li></h2>
-  <br/>
-  <h4>
+<h2><li style="list-style-type: none;"><a href='eateries/new'>+ Add New Eateries +</a></li></h2>
+
+  <h3>
+    <hr width="50%">
 <% for eatery in @eateries %>
    <%= eatery.name %>
-<hr/>
-   <br/>
+    <hr width="50%">
+
 
 <% end %>
   <br/>
 
-  </h4>
+</h3>
 </div>

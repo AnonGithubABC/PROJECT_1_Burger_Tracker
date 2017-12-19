@@ -1,0 +1,7 @@
+<br/>
+<h2><%= @burger.name %></h2>
+
+<p>Burger Deals Available for <%= @burger.name %>...With Burger ID: <%= @burger.id %></p>
+<p><% @burger_deals.each do |day| %>
+  <%= burger_deal.name %>
+<% end %></p>
