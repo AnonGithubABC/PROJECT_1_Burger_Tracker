@@ -1,5 +1,6 @@
-<h2>
-<%= @burger_deals.each |deal| do %>
+<br/>
 
-  <%= end %>
-</h2>
+
+<h2>Deals available for...<% @burger_deals.each do |deal| %>
+  <%= @burger_deals.deal_name %>
+<% end %></h2>

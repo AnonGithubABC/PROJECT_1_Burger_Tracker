@@ -13,6 +13,18 @@ get '/eateries/new' do
   erb(:"eateries/new")
 end
 
+get '/eateries/edit/:id' do
+  id = params[:id]
+  @eatery = Eatery.find(id)
+  erb(:edit)
+end
+
+post '/eateries/:id/delete' do
+  id = params[:id]
+  @eatery = Eatery.find(id)
+  @eatery.delete()
+  redirect '/eateries'
+end
 
 get '/eateries/:id' do
   id = params[:id]
@@ -20,8 +32,15 @@ get '/eateries/:id' do
   erb( :"eateries/show" )
 end
 
-post '/add_eateries' do
+post '/eateries/new' do
   @eatery = Eatery.new(params)
   @eatery.save
   redirect to '/eateries'
+end
+
+
+post ('/eateries/:id') do
+  @eatery = Eatery.new(params)
+  @eatery.update()
+  redirect '/eateries'
 end

@@ -26,6 +26,13 @@ class Eatery
     SqlRunner.run(sql, values)
   end
 
+  def update()
+  sql = "UPDATE eateries
+        SET (name) = ($1)
+        WHERE id = $2"
+  values = [@name, @id]
+  SqlRunner.run( sql, values )
+
     #---------CLASS METHODS BELOW-------------#
 
   def self.all()
