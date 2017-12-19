@@ -13,6 +13,16 @@ CREATE TABLE days (
   name VARCHAR(255)
 );
 
+CREATE TYPE days_of_week AS ENUM (
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday',
+);
+
 CREATE TABLE burgers (
   id SERIAL8 primary key,
   name VARCHAR(255),
@@ -24,5 +34,6 @@ CREATE TABLE burger_deals (
   id SERIAL8 primary key,
   deal_name VARCHAR(255),
   day_id INT8 REFERENCES days(id),
+  day_of_week DAYS_OF_WEEK,
   burger_id INT8 REFERENCES burgers(id)
 );

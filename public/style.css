@@ -116,3 +116,11 @@ div.topnav a.active {
     background-color: white;
     color: black;
 }
+
+
+select {
+ font-size: 0.8em;
+ font-family: sans-serif;
+ border: 1px solid #eee;
+ display: block;
+}

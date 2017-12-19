@@ -4,3 +4,15 @@
 <h2>Deals available for...<% @burger_deals.each do |deal| %>
   <%= @burger_deals.deal_name %>
 <% end %></h2>
+
+
+<% for burger_deal in @burger_deals %>
+   EATERY: <%= burger_deal.eatery.name %> <br/>
+   DAY: <%= burger_deal.days.all %> <br/>
+   BURGER: <%= burger_deal.burgers.name %> <br/>
+   DEAL: <%= burger_deal.deal_name %>
+
+    <hr width="50%">
+
+
+<% end %>

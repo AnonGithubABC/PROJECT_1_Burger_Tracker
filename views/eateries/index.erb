@@ -8,12 +8,15 @@
     <hr width="50%">
 <% for eatery in @eateries %>
    <%= eatery.name %>
+   </h3>
+<h5><a href="/eateries/<% eatery.id %>/edit">UPDATE THIS EATERY</a><h5>
     <hr width="50%">
-
 
 <% end %>
 
-</h3>
+
+
+
 
 <h2><li style="list-style-type: none;"><a href='eateries/edit'>- Update Eatery -</a></li></h2>
 </div>

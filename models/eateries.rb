@@ -27,13 +27,13 @@ class Eatery
   end
 
   def update()
-  sql = "UPDATE eateries
-        SET (name) = ($1)
-        WHERE id = $2"
-  values = [@name, @id]
-  SqlRunner.run( sql, values )
-
-    #---------CLASS METHODS BELOW-------------#
+    sql = "UPDATE eateries
+    SET (name) = ($1)
+    WHERE id = $2"
+    values = [@name, @id]
+    SqlRunner.run( sql, values )
+  end
+  #---------CLASS METHODS BELOW-------------#
 
   def self.all()
     sql = "SELECT * FROM eateries"
@@ -47,7 +47,6 @@ class Eatery
     WHERE id = $1"
     values = [id]
     results = SqlRunner.run( sql, values )
-    binding.pry
     return Eatery.new(results[0])
   end
 

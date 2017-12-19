@@ -23,7 +23,7 @@ class Burger
 
 
   def eatery()
-    eatery = Eatery.new(@eatery_id)
+    eatery = Eatery.find(@eatery_id)
     return eatery
   end
 

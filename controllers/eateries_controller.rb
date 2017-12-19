@@ -3,7 +3,7 @@ require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
 require_relative( '../models/eateries.rb' )
 
-get '/eateries' do
+get '/eateries/?' do
   @eateries = Eatery.all()
   erb ( :"eateries/index" )
 end
@@ -13,10 +13,10 @@ get '/eateries/new' do
   erb(:"eateries/new")
 end
 
-get '/eateries/edit/:id' do
+get '/eateries/:id/edit' do
   id = params[:id]
   @eatery = Eatery.find(id)
-  erb(:edit)
+  erb(:"eateries/edit")
 end
 
 post '/eateries/:id/delete' do
@@ -39,7 +39,7 @@ post '/eateries/new' do
 end
 
 
-post ('/eateries/:id') do
+post '/eateries/:id' do
   @eatery = Eatery.new(params)
   @eatery.update()
   redirect '/eateries'

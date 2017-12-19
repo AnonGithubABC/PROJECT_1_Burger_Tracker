@@ -7,7 +7,7 @@
   <h3>
     <hr width="50%">
 <% for burger in @burgers %>
-   NAME: <%= burger.name %> <br/> PRICE: £<%= burger.price %> <br/> EATERY ID: <%= burger.eatery_id %>
+   EATERY: <%= burger.eatery.name %> <br/> BURGER: <%= burger.name %> <br/> PRICE: £<%= burger.price %> 
     <hr width="50%">
 
 
