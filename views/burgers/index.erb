@@ -3,12 +3,15 @@
 
 <div style="text-align:center">
 <h2><li><a href='burgers/new'>+ Add New Burger</a></li></h2>
-  </br>
+  <br/>
   <h4>
 <% for burger in @burgers %>
-  <%=  burger.name  %> | Price: £<%= burger.price %> | Eatery ID: <%= burger.eatery_id %>
-  <hr/>
+  <%=  burger.name  %> / Price: £<%= burger.price %> / Eatery ID: <%= burger.eatery_id %>
+<hr/>
   <br/>
+
 <% end %>
-</h4>
+  <br/>
+
+  </h4>
 </div>
