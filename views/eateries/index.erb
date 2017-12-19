@@ -1,13 +1,15 @@
 <h1 style="text-align:center">LIST OF ALL EATERIES</h1>
 
+
 <div style="text-align:center">
+<h2><li><a href='eateries/new'>Add New Eateries</a></li></h2>
   <h4>
 <% for eatery in @eateries %>
-   <%= eatery.name %> 
+   <%= eatery.name %>
 <br/>
 
 <% end %>
 <br/>
-<li><a href='eateries/new'>Add New Eateries</a></li>
+
 </h4>
 </div>
