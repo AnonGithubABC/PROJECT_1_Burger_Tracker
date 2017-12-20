@@ -12,6 +12,13 @@
    BURGER: <%= burger_deal.burgers.name %> <br/>
    DEAL: <%= burger_deal.deal_name %>
 
+   <form action="/burger_deals/<%= burger_deal.id %>/edit" method="get">
+     <input type="submit" class="delete-button" value="Update Deal">
+   </form>
+   <form action="/burger_deals/<%= burger_deal.id %>/delete" method="post">
+     <input type="submit" class="delete-button" value="Delete Deal">
+   </form>
+
     <hr width="50%">
 
 

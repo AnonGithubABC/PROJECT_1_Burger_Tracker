@@ -17,24 +17,23 @@ get '/burgers/new' do
   erb(:"burgers/new")
 end
 
-get '/burgers/:id/day' do
-  id = params[:id]
-  @burger = Burger.find(id)
-  @days = @burger.days
-  erb( :"burgers/days" )
-end
-
-get '/burgers/:id/eatery' do
-  id = params[:id]
-  @burger = Burger.find(id)
-  @eateries = @burger.eatery
-  erb( :"burgers/eatery" )
-end
-
 get '/burgers/:id' do
   id = params[:id]
   @burger = Burger.find(id)
   erb( :"burgers/show" )
+end
+
+get '/burgers/:id/edit' do
+  id = params[:id]
+  @burger = Burger.find(id)
+  erb(:"burgers/edit")
+end
+
+post '/burgers/:id/edit' do
+  id = params[:id]
+  @burger = Burger.new(params)
+  @burger.update()
+  redirect '/burgers'
 end
 
   # get '/burgers/:name' do
@@ -42,8 +41,15 @@ end
   #   erb( :"burgers/show" )
   # end
 
-post '/add_burgers' do
+post '/burgers/new' do
   @burger = Burger.new(params)
   @burger.save
+  redirect to '/burgers'
+end
+
+post'/burgers/:id/delete' do
+  id = params[:id]
+  @burger = Burger.find(id)
+  @burger.delete()
   redirect to '/burgers'
 end

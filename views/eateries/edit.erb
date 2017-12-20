@@ -1,8 +1,8 @@
-<form action="/eateries/<%= @eatery.id %>/edit" method="POST" style="text-align:center">
+<form action="/eateries/<%= @eatery.id %>" method="POST" style="text-align:center">
 <p>
   <label for="eatery-name-input">Eatery Name:</label>
   <input id="eatery-name-input" type="text" name="name" value="<%= @eatery.name %>">
 
-  <input type="submit" name="" value="Edit Eatery">
+  <input type="submit" name="" value="Update Eatery">
 </p>
 </form>

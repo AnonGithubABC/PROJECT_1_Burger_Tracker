@@ -1,0 +1,9 @@
+<form action="/burger_deals/<%= @burger_deal.id %>/edit" method="POST" style="text-align:center">
+  <p>
+    <label for="deal-name-input">Deal Name:</label>
+    <input id="deal-name-input" type="text" name="deal_name" value="<%= @burger_deal.deal_name %>">
+
+
+    <input type="submit" name="" value="Update Deal">
+  </p>
+  </form>

@@ -58,8 +58,16 @@ class BurgerDeal
   end
 
   def burgers()
-    burgers = Burger.find(@burger_id)
-    return burgers
+    burger = Burger.find(@burger_id)
+    return burger
+  end
+
+  def update()
+    sql = "UPDATE burger_deals
+    SET deal_name = $1
+    WHERE id = $2"
+    values = [@deal_name, @id]
+    SqlRunner.run( sql, values )
   end
 
 
@@ -93,6 +101,12 @@ class BurgerDeal
     return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
   end
 
+  def self.find_all_by_burger(id)
+    sql = "SELECT * FROM burger_deals WHERE burger_id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
+  end
 
   def self.find_by_burgername(burgername_to_find)
     sql = "SELECT * FROM burgers WHERE name = $1"

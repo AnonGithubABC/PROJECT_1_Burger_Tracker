@@ -32,7 +32,7 @@ padding: 10px 10px 10px 10px;
 
 
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   font-family: sans-serif;
   margin: 0px;
   padding: 0px;
@@ -48,6 +48,13 @@ h1 {
   font-size: 3em;
   color: white;
   margin-bottom: 20px;
+}
+
+h6 {
+  font-size: 12px;
+  margin: 0px;
+  padding: 0px;
+  color: grey;
 }
 
 a, a:link, a:visited {
@@ -69,6 +76,15 @@ div.header-img {
   height:100%;
 }
 
+div.list-update-delete {
+  font-size: 23px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+
+
+}
+
 div.burger-icons {
   text-align: center;
   margin: auto;
@@ -84,7 +100,10 @@ div.eatery-icons {
   margin: auto;
 }
 
+.delete-button {
 
+  
+}
 
 
 /* Add a black background color to the top navigation */
@@ -115,12 +134,4 @@ div.topnav a:hover {
 div.topnav a.active {
     background-color: white;
     color: black;
-}
-
-
-select {
- font-size: 0.8em;
- font-family: sans-serif;
- border: 1px solid #eee;
- display: block;
 }

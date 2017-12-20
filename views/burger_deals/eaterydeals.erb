@@ -1,9 +1,9 @@
-<h2 style="text-align:center">SELECT BURGER BY EATERY</h2>
+<h2 style="text-align:center">SELECT DEAL BY EATERY</h2>
 
 <br/>
 <div class="eatery-icons">
 <% @eateries.each do |eatery| %>
-  <a href="/burger_deals/eaterydeals/<%= eatery.name %>">
+  <a href="/burger_deals/eaterydeals/<%= eatery.id %>">
     <img src="/images/<%= eatery.name %>-ICON.png" alt=""> </a>
 <% end %>
 </div>

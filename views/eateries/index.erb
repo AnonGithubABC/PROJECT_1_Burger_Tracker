@@ -3,20 +3,24 @@
 
 <div style="text-align:center">
 <h2><li style="list-style-type: none;"><a href='eateries/new'>+ Add New Eateries +</a></li></h2>
+</div>
 
-  <h3>
+  <div class="list-update-delete" style="text-align:center">
     <hr width="50%">
 <% for eatery in @eateries %>
-   <%= eatery.name %>
-   </h3>
-<h5><a href="/eateries/<% eatery.id %>/edit">UPDATE THIS EATERY</a><h5>
+  <%= eatery.name %>
+  
+
+  <form action="/eateries/<%= eatery.id %>/edit" method="get">
+    <input type="submit" class="delete-button" value="Update Eatery">
+  </form>
+  <form action="/eateries/<%= eatery.id %>/delete" method="post">
+    <input type="submit" class="delete-button" value="Delete Eatery">
+  </form>
+
     <hr width="50%">
+
 
 <% end %>
 
-
-
-
-
-<h2><li style="list-style-type: none;"><a href='eateries/edit'>- Update Eatery -</a></li></h2>
 </div>

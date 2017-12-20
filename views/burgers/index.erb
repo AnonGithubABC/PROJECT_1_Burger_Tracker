@@ -3,17 +3,23 @@
 
 <div style="text-align:center">
 <h2><li style="list-style-type: none;"><a href='burgers/new'>+ Add New Burger +</a></li></h2>
+</div>
 
-  <h3>
+  <div class="list-update-delete" style="text-align:center">
     <hr width="50%">
 <% for burger in @burgers %>
-   EATERY: <%= burger.eatery.name %> <br/> BURGER: <%= burger.name %> <br/> PRICE: £<%= burger.price %> 
-    <hr width="50%">
+   EATERY: <%= burger.eatery.name %> <br/> NAME: <%= burger.name %> <br/> PRICE: £<%= burger.price %>
 
+
+    <form action="/burgers/<%= burger.id %>/edit" method="get">
+      <input type="submit" class="delete-button" value="Update Burger">
+    </form>
+    <form action="/burgers/<%= burger.id %>/delete" method="post">
+      <input type="submit" class="delete-button" value="Delete Burger">
+    </form>
+
+    <hr width="50%">
 
 <% end %>
 
-</h3>
-
-<h2><li style="list-style-type: none;"><a href='burgers/update'>- Update Burger -</a></li></h2>
 </div>

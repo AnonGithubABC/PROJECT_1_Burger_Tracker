@@ -51,6 +51,14 @@ class Burger
   # end
 
 
+  def update()
+    sql = "UPDATE burgers
+    SET (name, price) = ($1, $2)
+    WHERE id = $3"
+    values = [@name, @price, @id]
+    SqlRunner.run( sql, values )
+  end
+
   def delete()
   sql = "DELETE FROM burgers WHERE id = $1"
   values = [@id]
