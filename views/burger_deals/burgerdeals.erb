@@ -3,7 +3,7 @@
 <br/>
 <div class="burger-icons">
 <% @burgers.each do |burger| %>
-  <a href="/burger_deals/burgerdeals/<%= burger.id %>">
+  <a href="/burger_deals/deals_by_burger/<%= burger.name %>">
     <img src="/images/<%= burger.name %>-ICON.png" alt=""> </a>
 <% end %>
 </div>

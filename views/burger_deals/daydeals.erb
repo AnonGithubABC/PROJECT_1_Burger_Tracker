@@ -3,7 +3,7 @@
 <br/>
 <div class="day-icons">
 <% @days.each do |day| %>
-  <a href="/burger_deals/daydeals/<%= day.id %>">
+  <a href="/burger_deals/deals_by_day/<%= day.name %>">
     <img src="/images/<%= day.name %>-ICON.png" alt="" width="10%" height="10%"> </a>
 <% end %>
 </div>

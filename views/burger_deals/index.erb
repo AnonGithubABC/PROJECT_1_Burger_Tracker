@@ -3,8 +3,9 @@
 
 <div style="text-align:center">
 <h2><li style="list-style-type: none;"><a href='burger_deals/new'>+ Add New Deal +</a></li></h2>
+</div>
 
-  <h3>
+  <div class="list-update-delete" style="text-align:center">
     <hr width="50%">
 <% for burger_deal in @burger_deals %>
    EATERY: <%= burger_deal.eatery.name %> <br/>
@@ -12,9 +13,9 @@
    BURGER: <%= burger_deal.burgers.name %> <br/>
    DEAL: <%= burger_deal.deal_name %>
 
-   <form action="/burger_deals/<%= burger_deal.id %>/edit" method="get">
-     <input type="submit" class="delete-button" value="Update Deal">
-   </form>
+<br/>
+   <a href="/burger_deals/<%= burger_deal.id %>/edit">
+      <button type="button" name="button">Update Deal</button></a>
    <form action="/burger_deals/<%= burger_deal.id %>/delete" method="post">
      <input type="submit" class="delete-button" value="Delete Deal">
    </form>
@@ -24,6 +25,4 @@
 
 <% end %>
 
-</h3>
-<h2><li style="list-style-type: none;"><a href='burgers_deals/update'>- Update Deals -</a></li></h2>
 </div>

@@ -10,10 +10,9 @@
 <% for burger in @burgers %>
    EATERY: <%= burger.eatery.name %> <br/> NAME: <%= burger.name %> <br/> PRICE: £<%= burger.price %>
 
-
-    <form action="/burgers/<%= burger.id %>/edit" method="get">
-      <input type="submit" class="delete-button" value="Update Burger">
-    </form>
+<br/>
+   <a href="burgers/<%= burger.id %>/edit">
+      <button type="button" name="button">Update Burger</button></a>
     <form action="/burgers/<%= burger.id %>/delete" method="post">
       <input type="submit" class="delete-button" value="Delete Burger">
     </form>

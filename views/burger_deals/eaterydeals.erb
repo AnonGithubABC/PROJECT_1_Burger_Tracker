@@ -1,9 +1,11 @@
 <h2 style="text-align:center">SELECT DEAL BY EATERY</h2>
 
 <br/>
-<div class="eatery-icons">
+<div class="flex-container-eatery">
+  <div>
 <% @eateries.each do |eatery| %>
-  <a href="/burger_deals/eaterydeals/<%= eatery.id %>">
+  <a href="/burger_deals/deals_by_eatery/<%= eatery.name %>">
     <img src="/images/<%= eatery.name %>-ICON.png" alt=""> </a>
 <% end %>
+</div>
 </div>

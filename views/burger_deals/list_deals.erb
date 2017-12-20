@@ -1,0 +1,28 @@
+<h1 style="text-align:center">LIST OF ALL <%= @name.upcase %> DEALS</h1>
+
+
+<div style="text-align:center">
+
+  <h3>
+
+
+
+<hr width="50%">
+<% for burger_deal in @burger_deals %>
+
+
+   EATERY: <%= burger_deal.eatery.name %> <br/>
+   DAY: <%= burger_deal.days.name %> <br/>
+   BURGER: <%= burger_deal.burgers.name %> <br/>
+   DEAL: <%= burger_deal.deal_name %>
+   <br/>
+
+    <hr width="50%">
+
+
+<% end %>
+
+
+</h3>
+</div>
+<br/>

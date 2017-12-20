@@ -64,9 +64,9 @@ class BurgerDeal
 
   def update()
     sql = "UPDATE burger_deals
-    SET deal_name = $1
-    WHERE id = $2"
-    values = [@deal_name, @id]
+    SET (deal_name, day_id) = ($1, $2)
+    WHERE id = $3"
+    values = [@deal_name, @day_id, @id]
     SqlRunner.run( sql, values )
   end
 
@@ -101,16 +101,18 @@ class BurgerDeal
     return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
   end
 
-  def self.find_all_by_burger(id)
-    sql = "SELECT * FROM burger_deals WHERE burger_id = $1"
-    values = [id]
+  def self.find_all_by_burger_name(name)
+    sql = "SELECT burger_deals.* FROM burger_deals INNER JOIN burgers
+          ON burger_deals.burger_id = burgers.id WHERE burgers.name = $1"
+    values = [name]
     results = SqlRunner.run( sql, values )
     return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
   end
 
-  def self.find_by_burgername(burgername_to_find)
-    sql = "SELECT * FROM burgers WHERE name = $1"
-    values = [burgername_to_find]
+  def self.find_all_by_day_name(name)
+    sql = "SELECT burger_deals.* FROM burger_deals INNER JOIN days
+          ON burger_deals.day_id = days.id WHERE days.name = $1"
+    values = [name]
     results = SqlRunner.run( sql, values )
     return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
   end

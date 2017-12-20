@@ -1,8 +1,14 @@
-<form action="/burger_deals/<%= @burger_deal.id %>/edit" method="POST" style="text-align:center">
+<form action="/burger_deals/<%= @burger_deal.id %>" method="POST" style="text-align:center">
   <p>
     <label for="deal-name-input">Deal Name:</label>
     <input id="deal-name-input" type="text" name="deal_name" value="<%= @burger_deal.deal_name %>">
 
+    <label for="day-select">Day:</label>
+    <select class="day_id" name="day_id">
+      <% @days.each do |day| %>
+              <option value=<%= day.id %> <%= "selected" if @burger_deal.days.name == day.name %>><%= day.name.capitalize %></option>
+          <% end %>
+    </select>
 
     <input type="submit" name="" value="Update Deal">
   </p>
