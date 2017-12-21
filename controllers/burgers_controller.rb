@@ -36,10 +36,6 @@ post '/burgers/:id/edit' do
   redirect '/burgers'
 end
 
-  # get '/burgers/:name' do
-  #   @burger = Burger.find(params['id'].to_i)
-  #   erb( :"burgers/show" )
-  # end
 
 post '/burgers/new' do
   @burger = Burger.new(params)

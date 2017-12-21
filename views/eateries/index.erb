@@ -9,11 +9,10 @@
     <hr width="50%">
 <% for eatery in @eateries %>
   <%= eatery.name %>
-  
 
-  <form action="/eateries/<%= eatery.id %>/edit" method="get">
-    <input type="submit" class="delete-button" value="Update Eatery">
-  </form>
+  <br/>
+     <a href="eateries/<%= eatery.id %>/edit">
+        <button type="button" name="button">Eatery Burger</button></a>
   <form action="/eateries/<%= eatery.id %>/delete" method="post">
     <input type="submit" class="delete-button" value="Delete Eatery">
   </form>
