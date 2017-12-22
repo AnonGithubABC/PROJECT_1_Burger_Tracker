@@ -118,7 +118,9 @@ class BurgerDeal
   end
 
   def self.find_all_by_eatery_name(name)
-    sql = "SELECT * FROM eateries where name = name"
+    sql = "SELECT burger_deals.* FROM burger_deals INNER JOIN burgers
+          ON burger_deals.burger_id = burgers.id INNER JOIN eateries
+          ON eateries.id = burgers.eatery_id WHERE eateries.name = $1"
     values = [name]
     results = SqlRunner.run( sql, values )
     return results.map { |burger_deal| BurgerDeal.new(burger_deal)}
